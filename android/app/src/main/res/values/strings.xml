@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">LaunchApp</string>
+    <string name="title_activity_main">LaunchApp</string>
+    <string name="package_name">com.rewards20.eventManager</string>
+    <string name="custom_url_scheme">com.rewards20.eventManager</string>
+</resources>

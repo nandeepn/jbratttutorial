@@ -1,0 +1,8 @@
+{
+    "appId": "com.rewards20.eventManager",
+    "appName": "LaunchApp",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "www",
+    "cordova": {}
+}

@@ -1,5 +1,7 @@
 {
   "name": "LaunchApp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
