@@ -1,21 +1,32 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
-import { IonicModule } from '@ionic/angular';
+import { LoadingController, AlertController } from '@ionic/angular';
 
-import { LoginPageRoutingModule } from './login-routing.module';
-import { LoginPage } from './login.page';
-
-@NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    LoginPageRoutingModule,
-    ReactiveFormsModule,
-  ],
-  declarations: [LoginPage]
+import { AuthService } from '../../services/user/auth.service';
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss']
 })
-export class LoginPageModule {}
+export class LoginPage implements OnInit {
+  public loginForm: FormGroup;
+  public loading: HTMLIonLoadingElement;
+  constructor(
+    public loadingCtrl: LoadingController,
+    public alertCtrl: AlertController,
+    private authService: AuthService,
+    private router: Router,
+    private formBuilder: FormBuilder
+  ) {this.loginForm = this.formBuilder.group({
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: [
+        '',
+        Validators.compose([Validators.required, Validators.minLength(6)])
+      ]
+    }); }
+
+  ngOnInit() {}
+}
+
