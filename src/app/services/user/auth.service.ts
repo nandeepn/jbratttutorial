@@ -7,7 +7,7 @@ import 'firebase/firestore';
 // import { AngularFireAuth } from 'angularfire2/auth';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 /* export class AuthProvider {
   constructor(public afAuth: AngularFireAuth) {}

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { ResetPasswordPageRoutingModule } from './reset-password-routing.module';
-
 import { ResetPasswordPage } from './reset-password.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { ResetPasswordPage } from './reset-password.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ResetPasswordPageRoutingModule
+    ResetPasswordPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [ResetPasswordPage]
 })
