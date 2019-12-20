@@ -17,18 +17,10 @@ const { SplashScreen, StatusBar } = Plugins;
 })
 export class AppComponent {
   constructor() {
-    firebase.initializeApp(firebaseConfig);
     this.initializeApp();
   }
 
   initializeApp() {
     firebase.initializeApp(firebaseConfig);
-    SplashScreen.hide().catch(error => {
-      console.error(error);
-    });
-
-    StatusBar.hide().catch(error => {
-      console.error(error);
-    });
   }
 }

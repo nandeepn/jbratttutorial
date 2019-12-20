@@ -4,12 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './services/user/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'home',
     loadChildren: () =>
       import('./home/home.module').then(m => m.HomePageModule),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: 'event-create',
@@ -17,7 +17,7 @@ const routes: Routes = [
       import('./pages/event-create/event-create.module').then(
         m => m.EventCreatePageModule
       ),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: 'event-detail/:id',
@@ -25,7 +25,7 @@ const routes: Routes = [
       import('./pages/event-detail/event-detail.module').then(
         m => m.EventDetailPageModule
       ),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: 'event-list',
@@ -33,7 +33,7 @@ const routes: Routes = [
       import('./pages/event-list/event-list.module').then(
         m => m.EventListPageModule
       ),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -66,4 +66,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
